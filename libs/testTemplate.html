@@ -1,0 +1,32 @@
+<table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Title</th>
+                  <th>Publisher</th>
+                  <th>Category</th>
+                  <th>Auther</th>
+                  <th>I am a Key</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+              
+                {{#each book in books}}
+                <tr>
+                  <td>{{book.id}}</td>
+                  <td>{{book.title}}</td>
+                  <td>{{book.publisher}}</td>
+                  <td>{{book.category}}</td>
+                  <td>
+                    
+                    {{book.authors.0.firstName}}{{book.authors.0.lastName}}</td>
+                  <td>{{book.price.displayAmount}}</td>
+                  <td>{{#link-to 'details' book.id}}view details{{/link-to}}</td>
+                </tr>
+                
+                
+                {{/each}}
+                
+              </tbody>
+            </table>

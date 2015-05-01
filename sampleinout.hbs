@@ -1,0 +1,16 @@
+<table>
+    <thead> 
+        <th>Name</th> 
+        <th>Job Title</th> 
+        <th>Twitter</th> 
+    </thead> 
+    <tbody> 
+        {{#each users}} 
+        <tr> 
+            <td>{{fullName person}}</td> 
+            <td>{{jobTitle}}</td> 
+            <td><a href="https://twitter.com/{{twitter}}">{{twitter}}</a></td> 
+        </tr> 
+        {{/each}} 
+    </tbody> 
+</table> 
